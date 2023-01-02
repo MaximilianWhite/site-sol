@@ -1,0 +1,39 @@
+@media screen and (min-width: 450px) {
+	::-webkit-scrollbar { /* chrome based */
+		width: 0px;  /* ширина scrollbar'a */
+		background: transparent;  /* опционально */
+	}
+
+	html {
+		-ms-overflow-style: none;  /* IE 10+ */
+		scrollbar-width: none; /* Firefox */
+	}
+	
+	body {background:#eee}
+	form {margin:0}
+	.layout {background:#fff; width:940px; margin:1em auto; border:1px solid #ccc; padding:1em 2%}
+	h1 {color:#ccf5d5; font-size:2.2em; text-align:center; text-shadow: 1px 1px 1px #0000008f; font-family: Century Gothic}
+	h2 {color:#444; font-size:1.8em; text-align:center; font-family: Century Gothic}
+	h3 {color:#222; font-size:1.6em; text-align:center; font-family: Century Gothic}
+	p {color:#333; padding:0 0 0.5em; font:1em Arial; line-height:150%; font-family: Century Gothic}
+}
+
+@media screen and (max-width: 449px) {
+	::-webkit-scrollbar { /* chrome based */
+		width: 0px;  /* ширина scrollbar'a */
+		background: transparent;  /* опционально */
+	}
+
+	html {
+		-ms-overflow-style: none;  /* IE 10+ */
+		scrollbar-width: none; /* Firefox */
+	}
+	
+	body {background:#eee}
+	form {margin:0}
+	.layout {background:#fff; width: 100%; margin:1em auto; border:1px solid #ccc}
+	h1 {color:#ccf5d5; font-size:2.2em; text-align:center; text-shadow: 1px 1px 1px #0000008f; font-family: Century Gothic}
+	h2 {color:#444; font-size:1.8em; text-align:center; font-family: Century Gothic}
+	h3 {color:#222; font-size:1.6em; text-align:center; font-family: Century Gothic}
+	p {color:#333; padding:0 0 0.5em; font:1em Arial; line-height:150%; font-family: Century Gothic}
+}

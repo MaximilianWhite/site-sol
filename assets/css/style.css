@@ -1,0 +1,587 @@
+@font-face {
+    font-family: 'Raleway';
+    src: url('../fonts/Raleway-v4020-SemiBold.ttf') format("opentype");
+}
+
+/* ============================================ */
+
+* {
+    font-family: 'Raleway', sans-serif;
+
+    margin: 0;
+    padding: 0;
+    
+    text-decoration: none;
+}
+
+::-webkit-scrollbar { /* chrome based */
+    width: 0px;  /* ширина scrollbar'a */
+    background: transparent;  /* опционально */
+}
+
+html {
+    height: 100%;
+    -ms-overflow-style: none;  /* IE 10+ */
+    scrollbar-width: none; /* Firefox */
+    scroll-behavior: smooth;
+}
+
+/* ============================================ */
+
+.hidden {
+    opacity: 0;
+    transition: all 1s;
+}
+
+.show {
+    opacity: 1;
+}
+
+/* ============================================ */
+
+#Up_Panel {
+    position: fixed;
+    width: 100%;
+    z-index: 5000;
+
+    display: flex;
+    flex-direction: column;
+    justify-content: right;
+}
+
+#Up_Panel ul {
+    display: flex;
+    flex-direction: row;
+    justify-content: right;
+
+    margin-top: 10px;
+}
+
+#Up_Panel ul li {
+    margin-right: 10px;
+    margin-left: 10px;
+    list-style-type: none;
+
+    transition: all .1s ease-in-out;
+}
+
+#Up_Panel ul li a {
+    font-size: 1.5vw;
+    color: #ccf5d5;
+    text-shadow: 1px 1px 1px #000000;
+
+    cursor: pointer;
+}
+
+#Up_Panel ul li:hover { transform: scale(1.1); }
+#Up_Panel ul li:active { transform: scale(1); }
+
+#Up_Panel ul li a img {
+    width: 2.2vw;
+}
+
+#FeedBack_Button {
+    position: fixed;
+    left: 1vw;
+    bottom: 1vw;
+
+    transition: all .1s ease-in-out;
+
+    cursor: pointer;
+}
+
+#FeedBack_Button img:hover { transform: scale(1.1); }
+#FeedBack_Button img:active { transform: scale(1); }
+
+
+#FeedBack_Button img {
+    width: 4vw;
+}
+
+/* ============================================ */
+#Header {
+    display: flex;
+    flex-direction: row;
+    justify-content: center;
+}
+
+#Header img {
+    width: 100%;
+    position: absolute;
+    z-index: 1000;
+}
+
+#Header div {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    position: relative;
+    z-index: 2000;
+
+    margin-top: 13vw;
+}
+
+#Header div h1 {
+    color: #ccf5d5;
+    font-size: 3.5vw;
+    text-align: center;
+    text-shadow: 1px 1px 1px #000000;
+}
+
+#Header div a {
+    display: block;
+
+    width: 17vw;
+    height: 3.5vw;
+    background-color: #43d29d;
+    border-radius: 0.5vw;
+    box-shadow: 0 2px 4px rgba(0,0,0,0.5);
+
+    color: #ccf5d5;
+    font-size: 2.5vw;
+    text-shadow: 1px 1px 1px #000000;
+    text-align: center;
+
+    margin-top: 10px;
+
+    transition: all .1s ease-in-out;
+
+    cursor: pointer;
+}
+
+#Header div a:hover { transform: scale(1.1); }
+#Header div a:active { transform: scale(1); }
+
+/* ============================================ */
+
+.Blocks_Informs {
+    width: 100%;
+
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+
+    margin-top: 30%;
+}
+
+.Header_Informs {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+}
+
+.Header_Informs h1 {
+    color: #ccf5d5;
+    font-size: 4.5vw;
+    text-align: center;
+    text-shadow: 1px 1px 1px #000000;
+}
+.Header_Informs div {
+    background-image: url(../img/TextureStone.svg);
+    width: 50vw;
+    height: 1.1vw;
+
+    border-radius: 2.5vw;
+    box-shadow: 0 2px 4px rgba(0,0,0,0.5);
+}
+
+.Inner_Informs {
+    display: flex;
+    flex-direction: row;
+    justify-content: center;
+    flex-wrap: wrap;
+}
+
+/* ============================================ */
+
+.Block_Product {
+    width: 23vw;
+    height: 34vw;
+    border-radius: 2.5vw;
+    background-color: #dbd7d6;
+    box-shadow: 0 2px 4px rgba(0,0,0,0.5);
+
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+
+    margin-top: 2vw;
+    margin-right: 2vw;
+    margin-left: 2vw;
+}
+
+.Name_Product {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+
+    margin-top: 1vw;
+}
+
+.Name_Product h1 {
+    color: #ccf5d5;
+    font-size: 1.5vw;
+    text-align: center;
+    text-shadow: 1px 1px 1px #000000;
+}
+
+.Name_Product div {
+    background-color: #43d29d;
+    border-radius: 2.5vw;
+    box-shadow: 0 2px 4px rgba(0,0,0,0.5);
+
+    width: 15vw;
+    height: 0.4vw;
+}
+
+.Block_Product ul {
+    width: 80%;
+
+    margin-top: 1vw;
+}
+
+.Block_Product ul li {
+    color: #ccf5d5;
+    text-shadow: 1px 1px 1px #000000;
+    font-size: 1.5vw;
+}
+
+.Block_Product ul li p {
+    width: 100%;
+    height: 10vw;
+    overflow-wrap: break-word;
+    overflow-y: scroll;
+    scrollbar-width: none;
+
+    color: #ccf5d5;
+    font-size: 1vw;
+    text-shadow: 1px 1px 1px #000000;
+}
+
+.Image_Product {
+    width: 90%;
+    margin-top: 1vw;
+}
+
+.Block_Images_Product {
+    position: relative;
+
+    width: 100%;
+    height: 12.5vw;
+
+    z-index: 2000;
+}
+
+.Block_Images_Product img {
+    position: absolute;
+
+    width: 100%;
+    height: 100%;
+
+    border-radius: 1vw;
+    box-shadow: 0 2px 4px rgba(0,0,0,0.5);
+}
+
+.Buy_Product {
+    display: block;
+
+    width: 14vw;
+    height: 3vw;
+    background-color: #43d29d;
+    border-radius: 0.5vw;
+    box-shadow: 0 2px 4px rgba(0,0,0,0.5);
+
+    color: #ccf5d5;
+    font-size: 2.5vw;
+    text-shadow: 1px 1px 1px #000000;
+    text-align: center;
+
+    transition: all .1s ease-in-out;
+
+    cursor: pointer;
+
+    margin-top: 0.5vw;
+}
+
+.Buy_Product:hover { transform: scale(1.1); }
+.Buy_Product:active { transform: scale(1); }
+
+/* ============================================ */
+
+.Arrows_Product_Block {
+    margin-top: 4vw;
+
+    position: absolute;
+
+    display: flex;
+    flex-direction: row;
+    justify-content: space-between;
+
+    width: 20.6vw;
+
+    z-index: 3000;
+}
+
+.Arrows_About_Block {
+    margin-top: 16vw;
+
+    position: absolute;
+
+    display: flex;
+    flex-direction: row;
+    justify-content: space-between;
+
+    width: 33vw;
+
+    z-index: 3000;
+}
+
+.Arrows_Galary_Block {
+    margin-top: 14vw;
+
+    position: absolute;
+
+    display: flex;
+    flex-direction: row;
+    justify-content: space-between;
+
+    width: 44vw;
+
+    z-index: 3000;
+}
+
+.Right_Arrow {
+    background-image: url(../img/icons/StrelkaVPravo.svg);
+    background-size: cover;
+
+    width: 2.5vw;
+    height: 4vw;
+
+    opacity: 50%;
+    transition: all .1s ease-in-out;
+
+    cursor: pointer;
+}
+
+.Right_Arrow:hover { opacity: 100%; }
+.Right_Arrow:active { opacity: 50%; }
+
+.Left_Arrow {
+    background-image: url(../img/icons/StrelkaVLevo.svg);
+    background-size: cover;
+
+    width: 2.5vw;
+    height: 4vw;
+
+    opacity: 50%;
+    transition: all .1s ease-in-out;
+
+    cursor: pointer;
+}
+
+.Left_Arrow:hover { opacity: 100%; }
+.Left_Arrow:active { opacity: 50%; }
+
+/* ============================================ */
+
+.Block_About {
+    width: 70vw;
+    height: 35vw;
+
+    display: flex;
+    flex-direction: row;
+
+    background-color: #dbd7d6;
+    border-radius: 1vw;
+    box-shadow: 0 2px 4px rgba(0,0,0,0.5);
+
+    margin-top: 2vw;
+}
+
+.Block_About_Text {
+    width: 50%;
+    height: 100%;
+
+    display: flex;
+    justify-content: center;
+
+    overflow-y: scroll;
+    scrollbar-width: none;
+}
+
+.Block_About_Text ul:first-child {
+    width: 90%;
+}
+
+.Block_About_Text ul li {
+    color: #ccf5d5;
+    text-shadow: 1px 1px 1px #000000;
+    font-size: 1.5vw;
+
+    margin-top: 1vw;
+}
+
+.Block_About_Text a {
+    color: #ccf5d5;
+    text-shadow: 1px 1px 1px #000000;
+    font-size: 1.5vw;
+
+    transition: all .1s ease-in-out;
+    cursor: pointer;
+}
+
+.Block_About_Text a:hover {
+    text-decoration: underline;
+}
+
+.Block_About_Images {
+    width: 50%;
+    height: 100%;
+}
+
+.Block_Images_About {
+    position: relative;
+
+    width: 100%;
+    height: 100%;
+
+    z-index: 2000;
+}
+
+.Block_Images_About img {
+    position: absolute;
+
+    width: 95%;
+    height: 95%;
+    margin-top: 1vw;
+
+    border-radius: 1vw;
+    box-shadow: 0 2px 4px rgba(0,0,0,0.5);
+}
+
+/* ============================================ */
+
+.Block_Galary {
+    width: 44vw;
+    height: 30vw;
+
+    margin-top: 2vw;
+
+    display: flex;
+}
+
+.Block_Images_Galary {
+    position: relative;
+
+    width: 100%;
+    height: 100%;
+
+    z-index: 2000;
+}
+
+.Block_Images_Galary img {
+    position: absolute;
+    width: 100%;
+    height: 100%;
+
+    border-radius: 1vw;
+    box-shadow: 0 2px 4px rgba(0,0,0,0.5);
+}
+
+/* ============================================ */
+
+#Down {
+    display: flex;
+    flex-direction: row;
+    justify-content: center;
+}
+
+.Image_Down {
+    width: 100%;
+    position: absolute;
+    z-index: 1000;
+}
+
+.Inner_Down {
+    display: flex;
+    flex-direction: row;
+    justify-content: space-between;
+    width: 100%;
+    z-index: 2000;
+
+    margin-top: 9vw;
+}
+
+.Left_Buttons {
+    display: flex;
+    flex-direction: column;
+    justify-content: right;
+}
+
+.Left_Buttons li {
+    margin-top: 0.5vw;
+    margin-left: 1vw;
+    list-style-type: none;
+
+    transition: all .1s ease-in-out;
+}
+
+.Left_Buttons li a {
+    font-size: 1.5vw;
+    color: #ccf5d5;
+    text-shadow: 1px 1px 1px #000000;
+
+    cursor: pointer;
+}
+
+.Left_Buttons li:hover { transform: scale(1.1); }
+.Left_Buttons li:active { transform: scale(1); }
+
+.Left_Buttons li a img {
+    width: 2.2vw;
+}
+
+.Copyright_Down {
+    display: flex;
+    align-items: flex-end;
+}
+
+.Copyright_Down h1 {
+    font-size: 1.5vw;
+    color: #ccf5d5;
+    text-shadow: 1px 1px 1px #000000;
+}
+
+.Contacts_Down {
+    margin-top: 2.5vw;
+}
+
+.Contacts_Down li {
+    list-style-type: none;
+
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+
+    margin-right: 1vw;
+    margin-top: 1vw;
+}
+
+.Contacts_Down li img {
+    width: 1.7vw;
+    height: 1.7vw;
+    margin-right: 0.5vw;
+    margin-left: 0.5vw;
+}
+
+.Contacts_Down li a {
+    font-size: 1.5vw;
+    color: #ccf5d5;
+    text-shadow: 1px 1px 1px #000000;
+
+    cursor: pointer;
+}
+
+.Contacts_Down li a:hover { text-decoration: underline; }
+.Contacts_Down li a:active { text-decoration: none; }
