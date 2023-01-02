@@ -443,7 +443,7 @@
     width: 10vw;
     height: 2vw;
 
-    font-size: 28px;
+    font-size: 1.4vw;
     color: #ccf5d5;
     text-shadow: 1px 1px 1px #000000;
 
@@ -519,3 +519,61 @@
     box-shadow: 0px 2px 4px rgba(0,0,0,0.64);
     border-radius: 0.2vw;
 }
+
+/* ============================================ */
+
+.Arrows_Select_Color_Block {
+    position: absolute;
+
+    display: flex;
+    flex-direction: row;
+    justify-content: space-between;
+
+    width: 24.6vw;
+
+    z-index: 3000;
+}
+
+/* ============================================ */
+
+.Select_Color_Block {
+    width: 35vw;
+    height: 30vw;
+}
+
+.Select_Color_Block img {
+    width: 25vw;
+    height: 25vw;
+
+    border-radius: 1vw;
+    box-shadow: 0 2px 4px rgba(0,0,0,0.5);
+}
+
+.Button_Select_Color a {
+    background-color: #43d29d;
+    border-radius: 0.2vw;
+    box-shadow: 0 2px 4px rgba(0,0,0,0.5);
+    border: 0px;
+
+    display: flex;
+    align-items: center;
+    justify-content: center;
+
+    width: 15vw;
+    height: 3vw;
+
+    font-size: 2.2vw;
+    color: #ccf5d5;
+    text-shadow: 1px 1px 1px #000000;
+
+    text-decoration: none;
+
+    cursor: pointer;
+
+    transition: all 0.2s;
+
+    margin-top: 0.5vw;
+}
+
+.Button_Select_Color a:hover { transform: scale(1.1); }
+.Button_Select_Color a:active { transform: scale(1); }

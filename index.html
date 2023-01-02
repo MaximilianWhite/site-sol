@@ -22,6 +22,26 @@
     
 </head>
 <body>
+    <div id="Select_Color" class="Base_Settings_Window Close_BG">
+        "<h1 class='Name_Window'>Выбор цвета</h1>
+            <div class='Stick_Window'></div>
+            <div class='Select_Color_Block Base_Settings_Inner_Window'>
+                <div class="Arrows_Select_Color_Block">
+                    <a id="Product_Left_Arrow" class="Left_Arrow" data-type-arrow="select-color"></a>    
+                    <a id="Product_Right_Arrow" class="Right_Arrow" data-type-arrow="select-color"></a>
+                </div>
+                <div class="Block_Images_Select_Color">
+                    <img src="assets/img/TestProduct/id21.jpeg" style="display: block; opacity: 1" alt="Товар" data-select-color="0">
+                    <img src="assets/img/TestProduct/id22.jpeg" style="display: none; opacity: 0" alt="Товар" data-select-color="1">
+                    <img src="assets/img/TestProduct/id23.jpeg" style="display: none; opacity: 0" alt="Товар" data-select-color="2">
+                    <img src="assets/img/TestProduct/id24.jpeg" style="display: none; opacity: 0" alt="Товар" data-select-color="3">
+                </div>
+                <div class="Button_Select_Color">
+                    <a>Выбрать</a>
+                </div>
+            </div>
+            <div class='Stick_Window'></div>
+    </div>
     <div id="Loading" class="Base_Settings_Window" style="background-color: #FFF;">
         <img class="Loading_Image" src="assets/img/icons/loading.svg" alt="Загрузка...">
         <h1>Загрузка...</h1>
@@ -75,11 +95,14 @@
                 </ul>
                 <div class="Image_Product">
                     <div class="Arrows_Product_Block">
-                        <a id="Product_Left_Arrow" class="Left_Arrow"></a>    
-                        <a id="Product_Right_Arrow" class="Right_Arrow"></a>
+                        <a class="Left_Arrow" data-type-arrow="product-img"></a>    
+                        <a class="Right_Arrow" data-type-arrow="product-img"></a>
                     </div>
                     <div class="Block_Images_Product">
-                        <img src="assets/img/TestProduct/id21.jpeg" alt="Товар">
+                        <img src="assets/img/TestProduct/id21.jpeg" alt="Товар" style="display: block; opacity: 1" data-product-img>
+                        <img src="assets/img/TestProduct/id22.jpeg" alt="Товар" style="display: none; opacity: 0" data-product-img>
+                        <img src="assets/img/TestProduct/id23.jpeg" alt="Товар" style="display: none; opacity: 0" data-product-img>
+                        <img src="assets/img/TestProduct/id24.jpeg" alt="Товар" style="display: none; opacity: 0" data-product-img>
                     </div>
                 </div>
                 <a class="Buy_Product">Купить</a>
@@ -110,11 +133,12 @@
                 </div>
                 <div class="Block_About_Images">
                     <div class="Arrows_About_Block">
-                        <a id="About_Left_Arrow" class="Left_Arrow"></a>    
-                        <a id="About_Right_Arrow" class="Right_Arrow"></a>
+                        <a class="Left_Arrow" data-type-arrow="about-img"></a>    
+                        <a class="Right_Arrow" data-type-arrow="about-img"></a>
                     </div>
                     <div class="Block_Images_About">
-                        <img src="assets/img/TestAbout/1.jpg" alt="О нас">
+                        <img src="assets/img/TestAbout/1.jpg" style="display: block; opacity: 1" alt="О нас" data-about-img>
+                        <img src="assets/img/TestAbout/2.jpg" style="display: none; opacity: 0" alt="О нас" data-about-img>
                     </div>
                 </div>
             </div>
@@ -129,11 +153,12 @@
         <div class="Inner_Informs">
             <div class="Block_Galary hidden">
                 <div class="Arrows_Galary_Block">
-                    <a id="Galary_Left_Arrow" class="Left_Arrow"></a>    
-                    <a id="Galary_Right_Arrow" class="Right_Arrow"></a>
+                    <a class="Left_Arrow" data-type-arrow="galary-img"></a>    
+                    <a class="Right_Arrow" data-type-arrow="galary-img"></a>
                 </div>
                 <div class="Block_Images_Galary">
-                    <img src="assets/img/TestAbout/1.jpg" alt="Галерея">
+                    <img src="assets/img/TestAbout/1.jpg" style="display: block; opacity: 1" alt="Галерея" data-galary-img>
+                    <img src="assets/img/TestAbout/2.jpg" style="display: none; opacity: 0" alt="Галерея" data-galary-img>
                 </div>
             </div>
         </div>

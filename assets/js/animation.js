@@ -255,3 +255,48 @@ $('body').on('click', 'a[data-id-button="Go_To_Register_Auth"]', () => {
     Open_Modal_Window(true, GetJson['reg']); 
 });
 // =======================================================================
+
+$('body').on('click', '.Left_Arrow', (e) => {
+    const attr = 'img[data-'+e.target.dataset.typeArrow+']';
+    const all_img = document.querySelectorAll(attr);
+
+    for(let i = 0; i < all_img.length; i++) {
+        if($(all_img[i]).css('display') == 'block') {
+            $(all_img[i]).animate({
+                opacity: 0
+            }, 500, () => {
+                $(all_img[i]).css('display', 'none');
+                let select_element = 0;
+                if(i == 0) { select_element = all_img.length-1; }
+                else { select_element = i-1; }
+                
+                $(all_img[select_element]).css('display', 'block');
+                $(all_img[select_element]).animate({
+                    opacity: 1
+                }, 500);
+            });
+        }
+    }
+});
+
+$('body').on('click', '.Right_Arrow', (e) => {
+    const attr = 'img[data-'+e.target.dataset.typeArrow+']';
+    const all_img = document.querySelectorAll(attr);
+
+    for(let i = 0; i < all_img.length; i++) {
+        if($(all_img[i]).css('display') == 'block') {
+            $(all_img[i]).animate({
+                opacity: 0
+            }, 500, () => {
+                $(all_img[i]).css('display', 'none');
+                let select_element = 0;
+                if(i != all_img.length-1) { select_element = i+1; }
+                
+                $(all_img[select_element]).css('display', 'block');
+                $(all_img[select_element]).animate({
+                    opacity: 1
+                }, 500);
+            });
+        }
+    }
+});
