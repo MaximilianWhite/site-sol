@@ -1,12 +1,23 @@
+/* ============================================ */
+/* ================ [ ШРИФТЫ ] ================ */
+/* ============================================ */
+
 @font-face {
     font-family: 'Raleway';
     src: url('../fonts/Raleway-v4020-SemiBold.ttf') format("opentype");
 }
 
 /* ============================================ */
+/* ============== [ НАСТРОЙКИ ] =============== */
+/* ============================================ */
 
 * {
     font-family: 'Raleway', sans-serif;
+
+    color: #ccf5d5;
+    text-shadow: 1px 1px 1px #000000;
+
+    transition: all 0.5s;
 
     margin: 0;
     padding: 0;
@@ -26,23 +37,25 @@ html {
     scroll-behavior: smooth;
 }
 
+body { overflow-x: hidden; }
+
+.BoxS { box-shadow: 0 2px 4px rgba(0,0,0,0.5); }
+
+/* ============================================ */
+/* =============== [ АНИМАЦИЯ ] =============== */
 /* ============================================ */
 
-.hidden {
-    opacity: 0;
-    transition: all 1s;
-}
+.hidden { opacity: 0; }
+.show { opacity: 1; }
 
-.show {
-    opacity: 1;
-}
-
+/* ============================================ */
+/* =========== [ ВВЕРХНЯЯ ПАНЕЛЬ ] ============ */
 /* ============================================ */
 
 #Up_Panel {
     position: fixed;
     width: 100%;
-    z-index: 5000;
+    z-index: 3000;
 
     display: flex;
     flex-direction: column;
@@ -51,41 +64,55 @@ html {
 
 #Up_Panel ul {
     display: flex;
-    flex-direction: row;
     justify-content: right;
 
     margin-top: 10px;
+}
+
+@media screen and (min-width: 479px) {
+    #Up_Panel ul { flex-direction: row; }
+}
+@media screen and (max-width: 479px) {
+    #Up_Panel ul { 
+        flex-direction: column; 
+        align-items: flex-end;
+    }
 }
 
 #Up_Panel ul li {
     margin-right: 10px;
     margin-left: 10px;
     list-style-type: none;
-
-    transition: all .1s ease-in-out;
 }
 
-#Up_Panel ul li a {
-    font-size: 1.5vw;
-    color: #ccf5d5;
-    text-shadow: 1px 1px 1px #000000;
-
-    cursor: pointer;
-}
+#Up_Panel ul li a { cursor: pointer; }
 
 #Up_Panel ul li:hover { transform: scale(1.1); }
 #Up_Panel ul li:active { transform: scale(1); }
 
-#Up_Panel ul li a img {
-    width: 2.2vw;
+@media screen and (min-width: 800px) {
+    #Up_Panel ul li a img { width: 2.2vw; }
+    #Up_Panel ul li a { font-size: 1.5vw; }
 }
+@media screen and (min-width: 479px) and (max-width: 800px) {
+    #Up_Panel ul li a img { width: 4vw; }
+    #Up_Panel ul li a { font-size: 2.5vw; }
+}
+@media screen and (max-width: 479px) {
+    #Up_Panel ul li a img { width: 5vw; }
+    #Up_Panel ul li a { font-size: 3vw; }
+}
+
+/* ============================================ */
+/* =========== [ ОБРАТНАЯ СВЯЗЬ ] ============= */
+/* ============================================ */
 
 #FeedBack_Button {
     position: fixed;
     left: 1vw;
     bottom: 1vw;
 
-    transition: all .1s ease-in-out;
+    z-index: 3000;
 
     cursor: pointer;
 }
@@ -93,12 +120,17 @@ html {
 #FeedBack_Button img:hover { transform: scale(1.1); }
 #FeedBack_Button img:active { transform: scale(1); }
 
-
-#FeedBack_Button img {
-    width: 4vw;
+@media screen and (min-width: 800px) {
+    #FeedBack_Button img { width: 4vw; }
+}
+@media screen and (max-width: 800px) {
+    #FeedBack_Button img { width: 10vw; }
 }
 
 /* ============================================ */
+/* =============== [ ГЛАВНАЯ ] ================ */
+/* ============================================ */
+
 #Header {
     display: flex;
     flex-direction: row;
@@ -106,9 +138,21 @@ html {
 }
 
 #Header img {
-    width: 100%;
     position: absolute;
     z-index: 1000;
+}
+
+@media screen and (min-width: 800px) {
+    #Header img { width: 100%; }
+    #Header div { margin-top: 13vw; }
+}
+@media screen and (min-width: 479px) and (max-width: 800px) {
+    #Header img { width: 150%; }
+    #Header div { margin-top: 13vw; }
+}
+@media screen and (max-width: 479px) {
+    #Header img { width: 200%; }
+    #Header div { margin-top: 23vw; }
 }
 
 #Header div {
@@ -118,34 +162,44 @@ html {
     align-items: center;
     position: relative;
     z-index: 2000;
-
-    margin-top: 13vw;
 }
 
-#Header div h1 {
-    color: #ccf5d5;
-    font-size: 3.5vw;
-    text-align: center;
-    text-shadow: 1px 1px 1px #000000;
+#Header div h1 { text-align: center; }
+
+@media screen and (min-width: 800px) {
+    #Header div h1 { font-size: 3.5vw; }
+    #Header div a { 
+        width: 17vw;
+        height: 3.5vw; 
+        font-size: 2.5vw;
+    }
+}
+@media screen and (min-width: 479px) and (max-width: 800px) {
+    #Header div h1 { font-size: 5.5vw; }
+    #Header div a { 
+        width: 25vw;
+        height: 5.5vw;
+        font-size: 4.5vw;
+    }
+}
+@media screen and (max-width: 479px) {
+    #Header div h1 { font-size: 7.5vw; }
+    #Header div a { 
+        width: 25vw;
+        height: 6.5vw;
+        font-size: 5.5vw;
+    }
 }
 
 #Header div a {
     display: block;
 
-    width: 17vw;
-    height: 3.5vw;
     background-color: #43d29d;
     border-radius: 0.5vw;
-    box-shadow: 0 2px 4px rgba(0,0,0,0.5);
 
-    color: #ccf5d5;
-    font-size: 2.5vw;
-    text-shadow: 1px 1px 1px #000000;
     text-align: center;
 
     margin-top: 10px;
-
-    transition: all .1s ease-in-out;
 
     cursor: pointer;
 }
@@ -154,6 +208,8 @@ html {
 #Header div a:active { transform: scale(1); }
 
 /* ============================================ */
+/* ========== [ ИНФОРМАЦИЯ БЛОКОВ ] =========== */
+/* ============================================ */
 
 .Blocks_Informs {
     width: 100%;
@@ -161,8 +217,6 @@ html {
     display: flex;
     flex-direction: column;
     align-items: center;
-
-    margin-top: 30%;
 }
 
 .Header_Informs {
@@ -171,19 +225,37 @@ html {
     align-items: center;
 }
 
-.Header_Informs h1 {
-    color: #ccf5d5;
-    font-size: 4.5vw;
-    text-align: center;
-    text-shadow: 1px 1px 1px #000000;
-}
+.Header_Informs h1 { text-align: center; }
+
 .Header_Informs div {
     background-image: url(../img/TextureStone.svg);
-    width: 50vw;
-    height: 1.1vw;
 
     border-radius: 2.5vw;
-    box-shadow: 0 2px 4px rgba(0,0,0,0.5);
+}
+
+@media screen and (min-width: 800px) {
+    .Blocks_Informs { margin-top: 50vw; }
+    .Header_Informs h1 { font-size: 4.5vw; }
+    .Header_Informs div { 
+        width: 50vw;
+        height: 1.1vw; 
+    }
+}
+@media screen and (min-width: 479px) and (max-width: 800px) {
+    .Blocks_Informs { margin-top: 40vw; }
+    .Header_Informs h1 { font-size: 6.5vw; }
+    .Header_Informs div { 
+        width: 65vw;
+        height: 1.6vw; 
+    }
+}
+@media screen and (max-width: 479px) {
+    .Blocks_Informs { margin-top: 70vw; }
+    .Header_Informs h1 { font-size: 9.5vw; }
+    .Header_Informs div { 
+        width: 80vw;
+        height: 2vw; 
+    }
 }
 
 .Inner_Informs {
@@ -194,13 +266,12 @@ html {
 }
 
 /* ============================================ */
+/* ================ [ ТОВАРЫ ] ================ */
+/* ============================================ */
 
 .Block_Product {
-    width: 23vw;
-    height: 34vw;
     border-radius: 2.5vw;
     background-color: #dbd7d6;
-    box-shadow: 0 2px 4px rgba(0,0,0,0.5);
 
     display: flex;
     flex-direction: column;
@@ -219,20 +290,11 @@ html {
     margin-top: 1vw;
 }
 
-.Name_Product h1 {
-    color: #ccf5d5;
-    font-size: 1.5vw;
-    text-align: center;
-    text-shadow: 1px 1px 1px #000000;
-}
+.Name_Product h1 { text-align: center; }
 
 .Name_Product div {
     background-color: #43d29d;
     border-radius: 2.5vw;
-    box-shadow: 0 2px 4px rgba(0,0,0,0.5);
-
-    width: 15vw;
-    height: 0.4vw;
 }
 
 .Block_Product ul {
@@ -241,22 +303,11 @@ html {
     margin-top: 1vw;
 }
 
-.Block_Product ul li {
-    color: #ccf5d5;
-    text-shadow: 1px 1px 1px #000000;
-    font-size: 1.5vw;
-}
-
 .Block_Product ul li p {
     width: 100%;
-    height: 10vw;
     overflow-wrap: break-word;
     overflow-y: scroll;
     scrollbar-width: none;
-
-    color: #ccf5d5;
-    font-size: 1vw;
-    text-shadow: 1px 1px 1px #000000;
 }
 
 .Image_Product {
@@ -268,7 +319,6 @@ html {
     position: relative;
 
     width: 100%;
-    height: 12.5vw;
 
     z-index: 2000;
 }
@@ -280,129 +330,189 @@ html {
     height: 100%;
 
     border-radius: 1vw;
-    box-shadow: 0 2px 4px rgba(0,0,0,0.5);
 }
 
 .Buy_Product {
     display: block;
 
-    width: 14vw;
-    height: 3vw;
     background-color: #43d29d;
     border-radius: 0.5vw;
-    box-shadow: 0 2px 4px rgba(0,0,0,0.5);
 
-    color: #ccf5d5;
-    font-size: 2.5vw;
-    text-shadow: 1px 1px 1px #000000;
     text-align: center;
 
-    transition: all .1s ease-in-out;
-
     cursor: pointer;
-
-    margin-top: 0.5vw;
 }
 
 .Buy_Product:hover { transform: scale(1.1); }
 .Buy_Product:active { transform: scale(1); }
 
+@media screen and (min-width: 800px) {
+    .Block_Product { 
+        width: 23vw;
+        height: 34vw;
+    }
+    .Name_Product h1 { font-size: 1.5vw; }
+    .Name_Product div { 
+        width: 15vw;
+        height: 0.4vw; 
+    }
+    .Block_Product ul li p {
+        height: 10vw;
+        font-size: 1vw;
+    }
+    .Block_Product ul li { font-size: 1.5vw; }
+    .Block_Images_Product { height: 12.5vw; }
+    .Buy_Product {
+        width: 14vw;
+        height: 3vw;
+        font-size: 2.5vw;
+        margin-top: 0.5vw;
+    }
+}
+@media screen and (min-width: 479px) and (max-width: 800px) {
+    .Block_Product { 
+        width: 40vw;
+        height: 57vw;
+    }
+    .Name_Product h1 { font-size: 2.5vw; }
+    .Name_Product div { 
+        width: 35vw;
+        height: 0.6vw; 
+    }
+    .Block_Product ul li p {
+        height: 16vw;
+        font-size: 2vw;
+    }
+    .Block_Product ul li { font-size: 2.5vw; }
+    .Block_Images_Product { height: 22.5vw; }
+    .Buy_Product {
+        width: 20vw;
+        height: 5vw;
+        font-size: 4vw;
+        margin-top: 1.5vw;
+    }
+}
+@media screen and (max-width: 479px) {
+    .Block_Product { 
+        width: 45vw;
+        height: 65vw; 
+    }
+    .Name_Product h1 { font-size: 3.5vw; }
+    .Name_Product div { 
+        width: 40vw;
+        height: 0.6vw; 
+    }
+    .Block_Product ul li p {
+        height: 16vw;
+        font-size: 2vw;
+    }
+    .Block_Product ul li { font-size: 3.5vw; }
+    .Block_Images_Product { height: 25.5vw; }
+    .Buy_Product {
+        width: 24vw;
+        height: 6vw;
+        font-size: 4.5vw;
+        margin-top: 2.5vw;
+    }
+}
+
+/* ============================================ */
+/* =============== [ СТРЕЛКИ ] ================ */
 /* ============================================ */
 
-.Arrows_Product_Block {
-    margin-top: 4vw;
-
+.Arrows_About_Block, .Arrows_Galary_Block, .Arrows_Product_Block {
     position: absolute;
+
+    z-index: 3000;
 
     display: flex;
     flex-direction: row;
     justify-content: space-between;
-
-    width: 20.6vw;
-
-    z-index: 3000;
 }
 
-.Arrows_About_Block {
-    margin-top: 16vw;
-
-    position: absolute;
-
-    display: flex;
-    flex-direction: row;
-    justify-content: space-between;
-
-    width: 33vw;
-
-    z-index: 3000;
-}
-
-.Arrows_Galary_Block {
-    margin-top: 14vw;
-
-    position: absolute;
-
-    display: flex;
-    flex-direction: row;
-    justify-content: space-between;
-
-    width: 44vw;
-
-    z-index: 3000;
-}
-
-.Right_Arrow {
-    background-image: url(../img/icons/StrelkaVPravo.svg);
+.Right_Arrow, .Left_Arrow {
     background-size: cover;
 
-    width: 2.5vw;
-    height: 4vw;
-
     opacity: 50%;
-    transition: all .1s ease-in-out;
 
     cursor: pointer;
 }
 
-.Right_Arrow:hover { opacity: 100%; }
-.Right_Arrow:active { opacity: 50%; }
+.Right_Arrow { background-image: url(../img/icons/StrelkaVPravo.svg); }
+.Left_Arrow { background-image: url(../img/icons/StrelkaVLevo.svg); }
 
-.Left_Arrow {
-    background-image: url(../img/icons/StrelkaVLevo.svg);
-    background-size: cover;
+.Right_Arrow:hover, .Left_Arrow:hover { opacity: 100%; }
+.Right_Arrow:active, .Left_Arrow:active { opacity: 50%; }
 
-    width: 2.5vw;
-    height: 4vw;
-
-    opacity: 50%;
-    transition: all .1s ease-in-out;
-
-    cursor: pointer;
+@media screen and (min-width: 800px) {
+    .Left_Arrow, .Right_Arrow{ 
+        width: 2.5vw;
+        height: 4vw;
+    }
+    .Arrows_Product_Block {
+        margin-top: 4vw; 
+        width: 20.6vw;
+    }
+    .Arrows_About_Block {
+        margin-top: 16vw;   
+        width: 33vw;
+    }
+    .Arrows_Galary_Block {
+        margin-top: 14vw;
+        width: 44vw;    
+    }
+}
+@media screen and (min-width: 479px) and (max-width: 800px) {
+    .Left_Arrow, .Right_Arrow { 
+        width: 5.5vw;
+        height: 8vw;
+    }
+    .Arrows_Product_Block {
+        margin-top: 6vw; 
+        width: 36vw;
+    }
+    .Arrows_About_Block {
+        margin-top: 14vw;   
+        width: 33vw;
+    }
+    .Arrows_Galary_Block {
+        margin-top: 18vw;
+        width: 55vw;    
+    }
+}
+@media screen and (max-width: 479px) {
+    .Left_Arrow, .Right_Arrow { 
+        width: 5.5vw;
+        height: 8vw;
+    }
+    .Arrows_Product_Block {
+        margin-top: 8vw; 
+        width: 40.6vw;
+    }
+    .Arrows_About_Block {
+        margin-top: 18vw;   
+        width: 57vw;
+    }
+    .Arrows_Galary_Block {
+        margin-top: 18vw;
+        width: 55vw;    
+    }
 }
 
-.Left_Arrow:hover { opacity: 100%; }
-.Left_Arrow:active { opacity: 50%; }
-
+/* ============================================ */
+/* ================ [ О НАС ] ================= */
 /* ============================================ */
 
 .Block_About {
-    width: 70vw;
-    height: 35vw;
-
     display: flex;
-    flex-direction: row;
 
     background-color: #dbd7d6;
     border-radius: 1vw;
-    box-shadow: 0 2px 4px rgba(0,0,0,0.5);
 
     margin-top: 2vw;
 }
 
 .Block_About_Text {
-    width: 50%;
-    height: 100%;
-
     display: flex;
     justify-content: center;
 
@@ -410,35 +520,67 @@ html {
     scrollbar-width: none;
 }
 
+@media screen and (min-width: 800px) {
+    .Block_About { 
+        flex-direction: row; 
+        width: 70vw;
+        height: 35vw;
+    }
+    .Block_About_Text { width: 50%; }
+    .Block_About_Text ul li { font-size: 1.5vw; }
+    .Block_About_Text a { font-size: 1.5vw; }
+    .Block_About_Images { 
+        width: 50%; 
+        height: 100%;
+    }
+}
+@media screen and (min-width: 479px) and (max-width: 800px) {
+    .Block_About { 
+        flex-direction: row; 
+        width: 70vw;
+        height: 35vw;
+    }
+    .Block_About_Text { width: 50%; }
+    .Block_About_Text ul li { font-size: 2vw; }
+    .Block_About_Text a { font-size: 2vw; }
+    .Block_About_Images { 
+        width: 50%; 
+        height: 100%;
+    }
+}
+@media screen and (max-width: 479px) {
+    .Block_About { 
+        flex-direction: column;
+        width: 60vw;
+        height: 70vw;
+    }
+    .Block_About_Text { 
+        width: 100%; 
+        height: 40%;
+    }
+    .Block_About_Text ul li { font-size: 2.5vw; }
+    .Block_About_Text a { font-size: 2.5vw; }
+    .Block_About_Images { 
+        width: 100%; 
+        height: 60%;
+        display: flex;
+        justify-content: center;
+    }
+    .Block_Images_About {
+        display: flex;
+        justify-content: center;
+    }
+}
+
 .Block_About_Text ul:first-child {
     width: 90%;
 }
 
-.Block_About_Text ul li {
-    color: #ccf5d5;
-    text-shadow: 1px 1px 1px #000000;
-    font-size: 1.5vw;
+.Block_About_Text ul li { margin-top: 1vw; }
 
-    margin-top: 1vw;
-}
+.Block_About_Text a { cursor: pointer; }
 
-.Block_About_Text a {
-    color: #ccf5d5;
-    text-shadow: 1px 1px 1px #000000;
-    font-size: 1.5vw;
-
-    transition: all .1s ease-in-out;
-    cursor: pointer;
-}
-
-.Block_About_Text a:hover {
-    text-decoration: underline;
-}
-
-.Block_About_Images {
-    width: 50%;
-    height: 100%;
-}
+.Block_About_Text a:hover { text-decoration: underline; }
 
 .Block_Images_About {
     position: relative;
@@ -457,15 +599,13 @@ html {
     margin-top: 1vw;
 
     border-radius: 1vw;
-    box-shadow: 0 2px 4px rgba(0,0,0,0.5);
 }
 
 /* ============================================ */
+/* =============== [ ГАЛЕРЕЯ ] ================ */
+/* ============================================ */
 
 .Block_Galary {
-    width: 44vw;
-    height: 30vw;
-
     margin-top: 2vw;
 
     display: flex;
@@ -486,9 +626,29 @@ html {
     height: 100%;
 
     border-radius: 1vw;
-    box-shadow: 0 2px 4px rgba(0,0,0,0.5);
 }
 
+@media screen and (min-width: 800px) {
+    .Block_Galary {
+        width: 44vw;
+        height: 30vw;
+    }
+}
+@media screen and (min-width: 479px) and (max-width: 800px) {
+    .Block_Galary {
+        width: 55vw;
+        height: 44vw;
+    }
+}
+@media screen and (max-width: 479px) {
+    .Block_Galary {
+        width: 55vw;
+        height: 44vw;
+    }
+}
+
+/* ============================================ */
+/* ================= [ НИЗ ] ================== */
 /* ============================================ */
 
 #Down {
@@ -500,9 +660,8 @@ html {
 }
 
 .Image_Down {
-    width: 100%;
     position: absolute;
-    z-index: 1000;
+    z-index: 3500;
 }
 
 .Inner_Down {
@@ -510,8 +669,7 @@ html {
     flex-direction: row;
     justify-content: space-between;
     width: 100%;
-    height: 13vw;
-    z-index: 2000;
+    z-index: 4000;
 }
 
 .Left_Buttons {
@@ -522,43 +680,23 @@ html {
     height: 100%;
 }
 
-.Left_Buttons li {
-    margin-top: 0.5vw;
+.Left_Buttons a {
     margin-left: 1vw;
-    list-style-type: none;
-
-    transition: all .1s ease-in-out;
-}
-
-.Left_Buttons li a {
-    font-size: 1.5vw;
-    color: #ccf5d5;
-    text-shadow: 1px 1px 1px #000000;
 
     cursor: pointer;
 }
 
-.Left_Buttons li:hover { transform: scale(1.1); }
-.Left_Buttons li:active { transform: scale(1); }
-
-.Left_Buttons li a img {
-    width: 2.2vw;
-}
+.Left_Buttons a:hover { transform: scale(1.1); }
+.Left_Buttons a:active { transform: scale(1); }
 
 .Copyright_Down {
     display: flex;
     align-items: flex-end;
 }
 
-.Copyright_Down h1 {
-    font-size: 1.5vw;
-    color: #ccf5d5;
-    text-shadow: 1px 1px 1px #000000;
-}
+.Copyright_Down h1 { font-size: 1.5vw; }
 
-.Contacts_Down {
-    margin-top: 2.5vw;
-}
+.Contacts_Down { margin-top: 2.5vw; }
 
 .Contacts_Down li {
     list-style-type: none;
@@ -572,19 +710,53 @@ html {
 }
 
 .Contacts_Down li img {
-    width: 1.7vw;
-    height: 1.7vw;
     margin-right: 0.5vw;
     margin-left: 0.5vw;
 }
 
-.Contacts_Down li a {
-    font-size: 1.5vw;
-    color: #ccf5d5;
-    text-shadow: 1px 1px 1px #000000;
-
-    cursor: pointer;
-}
+.Contacts_Down li a { cursor: pointer; }
 
 .Contacts_Down li a:hover { text-decoration: underline; }
 .Contacts_Down li a:active { text-decoration: none; }
+
+@media screen and (min-width: 800px) {
+    #Down { margin-top: 20vw; }
+    .Image_Down { width: 100%; }
+    .Inner_Down { height: 13vw; }
+    .Left_Buttons a { font-size: 1.5vw; }
+    .Copyright_Down h1 { font-size: 1.5vw; }
+    .Left_Buttons img { width: 2.2vw; }
+    .Contacts_Down li img { 
+        width: 1.7vw; 
+        height: 1.7vw; 
+    }
+    .Contacts_Down li a { font-size: 1.5vw; }
+}
+@media screen and (min-width: 479px) and (max-width: 800px) {
+    #Down { margin-top: 40vw; }
+    .Image_Down { width: 150%; }
+    .Inner_Down { height: 20vw; }
+    .Left_Buttons a { font-size: 2vw; }
+    .Copyright_Down h1 { font-size: 2vw; }
+    .Left_Buttons img { width: 3vw; }
+    .Contacts_Down li img { 
+        width: 2vw; 
+        height: 2vw; 
+    }
+    .Contacts_Down li a { font-size: 2vw; }
+}
+@media screen and (max-width: 479px) {
+    #Down { margin-top: 60vw; }
+    .Image_Down { width: 200%; }
+    .Inner_Down { height: 27vw; }
+    .Left_Buttons a { font-size: 3vw; }
+    .Copyright_Down h1 { font-size: 2.5vw; }
+    .Left_Buttons img { width: 4vw; }
+    .Contacts_Down li img { 
+        width: 2.7vw; 
+        height: 2.7vw; 
+    }
+    .Contacts_Down li a { font-size: 2.5vw; }
+}
+
+/* ============================================ */
