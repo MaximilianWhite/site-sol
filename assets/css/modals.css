@@ -16,6 +16,8 @@
 
 /* ============================================ */
 
+/* ============================================ */
+
 .Base_Settings_Window {
     position: fixed;;
 
@@ -143,6 +145,53 @@
     flex-direction: row;
 }
 
+.Vertical_Stick_Window {
+    width: 0.2vw;
+    height: 4vw;
+    background-color: #43D29D;
+    box-shadow: 0 2px 4px rgba(0, 0, 0, 0.64);
+    border-radius: 5vw;
+}
+
+.Horizontal_Stick_Window {
+    width: 8vw;
+    height: 0.2vw;
+    background-color: #43D29D;
+    box-shadow: 0 2px 4px rgba(0, 0, 0, 0.64);
+    border-radius: 5vw;
+}
+
+.Common_Button_Window {
+    background-color: #43d29d;
+    border-radius: 0.2vw;
+    box-shadow: 0 2px 4px rgba(0,0,0,0.5);
+    border: 0px;
+
+    display: flex;
+    align-items: center;
+    justify-content: center;
+
+    width: 15vw;
+    height: 3vw;
+
+    font-size: 2.2vw;
+    color: #ccf5d5;
+    text-shadow: 1px 1px 1px #000000;
+
+    text-decoration: none;
+
+    cursor: pointer;
+
+    transition: all 0.2s;
+
+    margin-top: 0.5vw;
+}
+
+.Common_Button_Window:hover { transform: scale(1.1); }
+.Common_Button_Window:active { transform: scale(1); }
+
+/* ============================================ */
+
 /* ============================================ */
 
 .Line_Window, .Column_Window {
@@ -223,6 +272,8 @@
 
 /* ============================================ */
 
+/* ============================================ */
+
 #Loading {
     z-index: 9999;
 }
@@ -243,10 +294,14 @@
 
 /* ============================================ */
 
+/* ============================================ */
+
 .Auth_Block {
     width: 40vw;
     height: 30vw;
 }
+
+/* ============================================ */
 
 /* ============================================ */
 
@@ -262,10 +317,14 @@
 
 /* ============================================ */
 
+/* ============================================ */
+
 .More_About_Company_Block {
     width: 45vw;
     height: 35vw;
 }
+
+/* ============================================ */
 
 /* ============================================ */
 
@@ -461,6 +520,8 @@
 
 /* ============================================ */
 
+/* ============================================ */
+
 #Avatar {
     position: fixed;
 
@@ -522,6 +583,8 @@
 
 /* ============================================ */
 
+/* ============================================ */
+
 .Arrows_Select_Color_Block {
     position: absolute;
 
@@ -533,6 +596,20 @@
 
     z-index: 3000;
 }
+
+.Arrows_Settings_Block {
+    position: absolute;
+
+    display: flex;
+    flex-direction: row;
+    justify-content: space-between;
+
+    width: 44vw;
+
+    z-index: 3000;
+}
+
+/* ============================================ */
 
 /* ============================================ */
 
@@ -549,31 +626,525 @@
     box-shadow: 0 2px 4px rgba(0,0,0,0.5);
 }
 
-.Button_Select_Color a {
-    background-color: #43d29d;
-    border-radius: 0.2vw;
-    box-shadow: 0 2px 4px rgba(0,0,0,0.5);
-    border: 0px;
+/* ============================================ */
+
+/* ============================================ */
+
+.Product_Block {
+    width: 45vw;
+    height: 30vw;
+
+    justify-content: flex-start;
+
+    overflow-y: scroll;
+    scrollbar-width: none;
+}
+
+.Product_Block .Product_Item_First {
+    border-top-left-radius: 2vw;
+    border-top-right-radius: 2vw;
+}
+
+.Product_Block .Product_Item_Second {
+    margin-top: 0.5vw;
+}
+
+.Product_Block .Product_Display_Block {
+    width: 100%;
+    height: 5vw;
+
+    display: block;
+}
+
+.Product_Block .Product_Block_Column {
+    display: flex;
+    flex-direction: column;
+}
+
+.Product_Block .Product_Item {
+    width: 100%;
+    height: 5vw;
+
+    position: relative;
+
+    background-color: #D7D4AB78;
+    box-shadow: 0 2px 4px rgba(0, 0, 0, 0.64);
 
     display: flex;
+    flex-direction: row;
     align-items: center;
-    justify-content: center;
+    justify-content: space-between;
+}
 
-    width: 15vw;
-    height: 3vw;
+.Product_Block .Product_Item a {
+    font-size: 1.2vw;
+    color: #43d29d;
+    text-shadow: 1px 1px 1px #000000;
 
-    font-size: 2.2vw;
+    position: absolute;
+    top: 0.5vw;
+    right: 1.5vw;
+
+    transition: all 0.2s;
+
+    cursor: pointer;
+}
+
+.Product_Block .Product_Item a:hover { transform: scale(1.1); }
+.Product_Block .Product_Item a:active { transform: scale(1); }
+
+.Product_Block .Product_Item h1 {
+    font-size: 1.2vw;
     color: #ccf5d5;
     text-shadow: 1px 1px 1px #000000;
 
-    text-decoration: none;
+    margin-top: 0.2vw;
+    margin-bottom: 0.2vw;
+}
 
-    cursor: pointer;
+.Product_Block .Product_Item img {
+    width: 3vw;
+    height: 3vw;
+    border-radius: 50%;
+
+    margin-left: 1vw;
+}
+
+.Product_Block .Product_Item input {
+    width: 4vw;
+
+    background-color: #00000000;
+
+    font-size: 1.5vw;
+    color: #ccf5d5;
+    text-shadow: 1px 1px 1px #000000;
+
+    border-radius: 0.4vw;
+
+    border-style: none;
+
+    border-bottom-style: solid;
+    border-bottom-width: 0.2vw;
+    border-bottom-color: #43d29d;
+
+    text-align: center;
+}
+
+.Product_Block .Product_Item h1:last-child { margin-right: 3vw; }
+
+/* ============================================ */
+
+/* ============================================ */
+.Profile_Block {
+    width: 45vw;
+    height: 30vw;
+
+    display: flex;
+    flex-direction: column;
+}
+
+.Profile_Block .First_Path_Profile_Block {
+    display: flex;
+    flex-direction: row;
+
+    width: 100%;
+    height: 70%;
+}
+
+.Profile_Block .First_Path_Profile_Block .First_Profile_Block {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+
+    width: 40%;
+    height: 100%;
+}
+
+.Profile_Block ul {
+    color: #ccf5d5;
+    text-shadow: 1px 1px 1px #000000;
+}
+
+.Profile_Block ul li {
+    display: flex;
+    flex-direction: row;
+}
+
+.Profile_Block .First_Path_Profile_Block .Second_Profile_Block {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+
+    width: 60%;
+    height: 100%;
+}
+
+.Profile_Block .Second_Path_Profile_Block {
+    display: flex;
+    align-items: center;
+    justify-content: space-around;
+
+    width: 100%;
+    height: 30%;
+}
+
+.First_Path_Profile_Block h1, .First_Path_Profile_Block a {
+    font-size: 1.5vw;
+    color: #ccf5d5;
+    text-shadow: 1px 1px 1px #000000;
+
+    margin-right: 0.2vw;
+    margin-left: 0.2vw;
+}
+
+.First_Path_Profile_Block a { cursor: pointer; }
+.First_Path_Profile_Block a:hover { text-decoration: underline; }
+.First_Path_Profile_Block a:active { text-decoration: none; }
+
+.Profile_Block .Vertical_Stick_Profile {
+    width: 0.2vw;
+    height: 16vw;
+
+    background-color: #43D29D;
+    box-shadow: 0 2px 4px rgba(0, 0, 0, 0.64);
+    border-radius: 5vw;
+}
+
+.Profile_Block .Horizontal_Stick_Profile {
+    width: 16vw;
+    height: 0.2vw;
+
+    background-color: #43D29D;
+    box-shadow: 0 2px 4px rgba(0, 0, 0, 0.64);
+    border-radius: 5vw;
+
+    margin-top: 0.5vw;
+    margin-bottom: 0.5vw;
+}
+
+/* ============================================ */
+
+/* ============================================ */
+
+.Settings_Block {
+    width: 45vw;
+    height: 30vw;
+}
+
+.Settings_Block .Settings_Path_Display_Block {
+    width: 100%;
+    height: 100%;
+}
+
+.Settings_Path_Display_Block .Settings_Path_Block {
+    display: flex;
+    flex-direction: column;
+
+    align-items: center;
+    align-content: center;
+    justify-content: center;
+
+    width: 100%;
+    height: 100%;
+}
+
+.Settings_Block h1 {
+    font-size: 2vw;
+    color: #ccf5d5;
+    text-shadow: 1px 1px 1px #000000;
+}
+
+.Settings_Block .Settings_Stick {
+    width: 20vw;
+}
+
+.Settings_Block input[type="Text"] {
+    border-bottom-width: 0.2vw;
+    border-left-width: 0px;
+    border-right-width: 0px;
+    border-top-width: 0px;
+    border-style: solid;
+    border-color: #43d29d;
+    border-radius: 0.2vw;
+    width: 28vw;
+    height: 3vw;
+    font-size: 2vw;
+    color: #ccf5d5;
+    text-align: center;
+    text-shadow: 1px 1px 1px #000000;
+    box-shadow: 0px 2px 0px rgba(0, 0, 0, 0.18);
+    background-color: #00000000;
 
     transition: all 0.2s;
+
+    outline: none;
+
+    margin: 0.5vw 0.5vw 0.5vw 0.5vw;
+}
+
+.Settings_Block input[type="Text"]:hover {
+    border-left-width: 0.2vw;
+    border-right-width: 0.2vw;
+    border-top-width: 0.2vw;
+    box-shadow: 0px 2px 4px rgba(0,0,0,0.64);
+}
+
+.Settings_Block input[type="Text"]:focus {
+    border-width: 0.25vw;
+    border-style: solid;
+    border-color: #43d29d;
+    box-shadow: 0px 2px 4px rgba(0,0,0,0.64);
+}
+
+/* ============================================ */
+
+/* ============================================ */
+
+.Processing_Block {
+    display: flex;
+    flex-direction: column;
+
+    width: 45vw;
+    height: 30vw;
+}
+
+.Processing_Block .Processing_Up_Block {
+    display: flex;
+    flex-direction: row;
+
+    width: 100%;
+    height: 70%;
+}
+
+.Processing_Up_Block .Processing_Left_Block {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+
+    width: 40%;
+    height: 100%;
+
+    overflow-y: scroll;
+    scrollbar-width: none;
+}
+
+.Processing_Left_Block .Processing_Product_Display_Block { display: block; width: 100%;}
+
+.Processing_Product_Display_Block .Processing_Product_Block {
+    width: 100%;
+    height: 4vw;
+
+    box-shadow: 0 2px 4px rgba(0, 0, 0, 0.64);
+
+    display: flex;
+    flex-direction: row;
+    justify-content: space-between;
+    align-items: center;
+
+    margin-top: 1vw;
+}
+
+.Processing_Product_Block img {
+    width: 2.5vw;
+    height: 2.5vw;
+
+    border-radius: 50%;
+    box-shadow: 0px 2px 0px rgba(0, 0, 0, 0.18);
+
+    margin-left: 0.5vw;
+}
+
+.Processing_Product_Block .Processing_Product_Path_Block {
+    width: 100%;
+    height: 100%;
+
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+    align-items: center;
+}
+
+.Processing_Product_Path_Block h1 {
+    font-size: 1.2vw;
+    color: #ccf5d5;
+    text-shadow: 1px 1px 1px #000000;
+}
+
+.Processing_Product_Path_Block .Processing_Product_Stick {
+    width: 80%;
+    height: 0.2vw;
+
+    background-color: #43D29D;
+    box-shadow: 0 2px 4px rgba(0, 0, 0, 0.64);
+    border-radius: 5vw;
+}
+
+.Processing_Product_Path_Block .Processing_Product_Inform {
+    width: 12vw;
+    display: flex;
+    flex-direction: row;
+    justify-content: space-between;
+}
+
+.Processing_Up_Block .Vertical_Stick_Processing {
+    width: 0.2vw;
+    height: 22vw;
+
+    background-color: #43D29D;
+    box-shadow: 0 2px 4px rgba(0, 0, 0, 0.64);
+    border-radius: 5vw;
+}
+
+.Processing_Up_Block .Processing_Right_Block {
+    width: 60%;
+    height: 100%;
+}
+
+.Processing_Right_Block .Processing_Top {
+    margin-top: 1vw;
+}
+
+.Processing_Right_Block .Processing_Inner_Display_Block {
+    width: 100%;
+    height: 26vw;
+}
+
+.Processing_Inner_Display_Block .Processing_Inner_Path_Block {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+
+    width: 100%;
+    height: 100%;
+}
+
+.Processing_Inner_Path_Block ul {
+    color: #ccf5d5;
+    text-shadow: 1px 1px 1px #000000;
+
+    margin-top: 0.5vw;
+    margin-bottom: 0.5vw;
+}
+
+.Processing_Inner_Path_Block ul li {
+    font-size: 1vw;
+    color: #ccf5d5;
+    text-shadow: 1px 1px 1px #000000;
+}
+
+.Processing_Inner_Path_Block .Processing_Inner_Row_Block {
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+
+    width: 100%;
+    height: 10vw;
+
+    margin-top: 0.5vw;
+    margin-bottom: 0.5vw;
+}
+
+.Processing_Inner_Row_Block input[type="radio"] {
+    margin-left: 0.5vw;
+}
+
+.Processing_Inner_Row_Block img {
+    width: 4vw;
+    height: 4vw;
+
+    margin-left: 0.5vw;
+}
+
+.Processing_Inner_Row_Block h1 {
+    font-size: 1vw;
+    color: #ccf5d5;
+    text-shadow: 1px 1px 1px #000000;
+    text-align: center;
+
+    margin-bottom: 0.5vw;
+}
+
+.Processing_Inner_Row_Block p {
+    font-size: 0.8vw;
+    color: #ccf5d5;
+    text-shadow: 1px 1px 1px #000000;
 
     margin-top: 0.5vw;
 }
 
-.Button_Select_Color a:hover { transform: scale(1.1); }
-.Button_Select_Color a:active { transform: scale(1); }
+.Processing_Inner_Row_Block .Processing_Inner_Column_Block {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+
+    margin-left: 0.5vw;
+    margin-right: 0.5vw;
+
+    width: 100%;
+    height: 100%;
+}
+
+.Processing_Inner_Stick {
+    width: 16vw;
+    height: 0.2vw;
+
+    background-color: #43D29D;
+    box-shadow: 0 2px 4px rgba(0, 0, 0, 0.64);
+    border-radius: 5vw;
+}
+
+.Processing_Block input[type="Text"] {
+    border-bottom-width: 0.2vw;
+    border-left-width: 0px;
+    border-right-width: 0px;
+    border-top-width: 0px;
+    border-style: solid;
+    border-color: #43d29d;
+    border-radius: 0.2vw;
+    width: 24vw;
+    height: 2.5vw;
+    font-size: 1.5vw;
+    color: #ccf5d5;
+    text-shadow: 1px 1px 1px #000000;
+    box-shadow: 0px 2px 0px rgba(0, 0, 0, 0.18);
+    background-color: #00000000;
+
+    transition: all 0.2s;
+
+    outline: none;
+
+    margin: 0.5vw 0.5vw 0.5vw 0.5vw;
+}
+
+.Processing_Block input[type="Text"]:hover {
+    border-left-width: 0.2vw;
+    border-right-width: 0.2vw;
+    border-top-width: 0.2vw;
+    box-shadow: 0px 2px 4px rgba(0,0,0,0.64);
+}
+
+.Processing_Block input[type="Text"]:focus {
+    border-width: 0.25vw;
+    border-style: solid;
+    border-color: #43d29d;
+    box-shadow: 0px 2px 4px rgba(0,0,0,0.64);
+}
+
+.Processing_Block .Processing_Down_Block {
+    display: flex;
+    flex-direction: row;
+    justify-content: center;
+    align-items: center;
+
+    width: 100%;
+    height: 30%;
+}
+
+.Processing_Block .Processing_Down_Block a {
+    margin-right: 1vw;
+    margin-left: 1vw;
+}

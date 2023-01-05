@@ -109,7 +109,303 @@ const GetJson = {
                         "</div>"+
                     "</div>"+
                 "</div>",
+    "select_color": "<div id='Select_Color' class='Base_Settings_Window Close_BG'>"+
+                        "<h1 class='Name_Window'>Выбор цвета</h1>"+
+                        "<div class='Stick_Window'></div>"+
+                        "<div class='Select_Color_Block Base_Settings_Inner_Window'>"+
+                            "<div class='Arrows_Select_Color_Block'>"+
+                                "<a class='Left_Arrow' data-type-arrow='select-color'></a>"+
+                                "<a class='Right_Arrow' data-type-arrow='select-color'></a>"+
+                            "</div>"+
+                            "<div class='Block_Images_Select_Color'>"+
+                                "<img src='assets/img/TestProduct/id21.jpeg' style='display: block; opacity: 1' alt='Товар' data-select-color='0'>"+
+                                "<img src='assets/img/TestProduct/id22.jpeg' style='display: none; opacity: 0' alt='Товар' data-select-color='1'>"+
+                                "<img src='assets/img/TestProduct/id23.jpeg' style='display: none; opacity: 0' alt='Товар' data-select-color='2'>"+
+                                "<img src='assets/img/TestProduct/id24.jpeg' style='display: none; opacity: 0' alt='Товар' data-select-color='3'>"+
+                            "</div>"+
+                            "<div class='Button_Select_Color'>"+
+                                "<a>Выбрать</a>"+
+                            "</div>"+
+                        "</div>"+
+                        "<div class='Stick_Window'></div>"+
+                    "</div>",
+    "basket": "<div id='Basket' class='Base_Settings_Window Close_BG'>"+
+                    "<h1 class='Name_Window'>Корзина</h1>"+
+                    "<div class='Stick_Window'></div>"+
+                    "<div class='Product_Block Base_Settings_Inner_Window'>"+
+                        "<div class='Product_Display_Block'>"+
+                            "<div class='Product_Item Product_Item_First'>"+
+                                "<a id='Delete_Basket'>X</a>"+
+                                "<img src='assets/img/TestProduct/id21.jpeg' alt='Товар'>"+
+                                "<h1>Соляная плитка</h1>"+
+                                "<div class='Vertical_Stick_Window'></div>"+
+                                "<h1>Цена: 500 руб.</h1>"+
+                                "<div class='Vertical_Stick_Window'></div>"+
+                                "<h1>Кол-во:</h1>"+
+                                "<input type='text' value='1'>"+
+                                "<h1>шт.</h1>"+
+                            "</div>"+
+                        "</div>"+
+                        "<a class='Product_Button'>Продолжить</a>"+
+                    "</div>"+
+                    "<div class='Stick_Window'></div>"+
+                "</div>",
+    "orders": "<div id='Orders' class='Base_Settings_Window Close_BG'>"+
+                    "<h1 class='Name_Window'>Мои заказы</h1>"+
+                    "<div class='Stick_Window'></div>"+
+                    "<div class='Product_Block Base_Settings_Inner_Window'>"+
+                        "<div class='Product_Display_Block'>"+
+                            "<div class='Product_Item Product_Item_First'>"+
+                                "<img src='assets/img/TestProduct/id21.jpeg' alt='Товар'>"+
+                                "<div class='Product_Block_Column'>"+
+                                    "<h1>Заказ #1</h1>"+
+                                    "<div class='Horizontal_Stick_Window'></div>"+
+                                    "<h1>Соляная плитка</h1>"+
+                                "</div>"+
+                                "<div class='Vertical_Stick_Window'></div>"+
+                                "<div class='Product_Block_Column'>"+
+                                    "<h1>500 руб.</h1>"+
+                                    "<div class='Horizontal_Stick_Window'></div>"+
+                                    "<h1>2 шт.</h1>"+
+                                "</div>"+
+                                "<div class='Vertical_Stick_Window'></div>"+
+                                "<h1>Состояние:</h1>"+
+                                "<h1>В ожидание</h1>"+
+                            "</div>"+
+                        "</div>"+
+                    "</div>"+
+                    "<div class='Stick_Window'></div>"+
+                "</div>",
+    "lk": "<div id='Profile' class='Base_Settings_Window Close_BG'>"+
+            "<h1 class='Name_Window'>Личный кабинет</h1>"+
+            "<div class='Stick_Window'></div>"+
+            "<div class='Profile_Block Base_Settings_Inner_Window'>"+
+                "<div class='First_Path_Profile_Block'>"+
+                    "<div class='First_Profile_Block'>"+
+                        "<h1>Абрашов</h1>"+
+                        "<h1>Максим</h1>"+
+                        "<h1>Александрович</h1>"+
+                    "</div>"+
+                    "<div class='Vertical_Stick_Profile'></div>"+
+                    "<div class='Second_Profile_Block'>"+
+                        "<ul>"+
+                            "<li>"+
+                                "<h1>Статус:</h1>"+
+                                "<a>Покупатель</a>"+
+                            "</li>"+
+                        "</ul>"+
+                        "<div class='Horizontal_Stick_Profile'></div>"+
+                        "<ul>"+
+                            "<li>"+
+                                "<h1>Моя корзина:</h1>"+
+                                "<a>8 товаров</a>"+
+                            "</li>"+
+                        "</ul>"+
+                        "<div class='Horizontal_Stick_Profile'></div>"+
+                        "<ul>"+
+                            "<li>"+
+                                "<h1>Мои заказы:</h1>"+
+                                "<a>5 товаров</a>"+
+                            "</li>"+
+                        "</ul>"+
+                        "<div class='Horizontal_Stick_Profile'></div>"+
+                        "<a>Настройки</a>"+
+                        "<div class='Horizontal_Stick_Profile'></div>"+
+                        "<a>Выйти из аккаунта</a>"+
+                        "<div class='Horizontal_Stick_Profile'></div>"+
+                    "</div>"+
+                "</div>"+
+                "<div class='Second_Path_Profile_Block'>"+
+                    "<a class='Common_Button_Window'>Мои заказы</a>"+
+                    "<a class='Common_Button_Window'>Моя корзина</a>"+
+                "</div>"+
+            "</div>"+
+            "<div class='Stick_Window'></div>"+
+        "</div>",
+    "settings": "<div id='Settings' class='Base_Settings_Window Close_BG'>"+
+                    "<h1 class='Name_Window'>Настройки</h1>"+
+                    "<div class='Stick_Window'></div>"+
+                    "<div class='Settings_Block Base_Settings_Inner_Window'>"+
+                        "<div class='Arrows_Settings_Block'>"+
+                            "<a class='Left_Arrow' data-type-arrow='settings-window'></a>"+
+                            "<a class='Right_Arrow' data-type-arrow='settings-window'></a>"+
+                        "</div>"+
+                        "<div class='Settings_Path_Display_Block' data-settings-window style='display: block; opacity: 1'>"+
+                            "<div class='Settings_Path_Block'>"+
+                                "<h1>Изменение данных</h1>"+
+                                "<div class='Horizontal_Stick_Window Settings_Stick'></div>"+
+                                "<input type='text' value='Абрашов' placeholder='*Фамилия'>"+
+                                "<input type='text' value='Максим' placeholder='*Имя'>"+
+                                "<input type='text' value='Александрович' placeholder='*Отчество'>"+
+                                "<a class='Common_Button_Window'>Изменить</a>"+
+                            "</div>"+
+                        "</div>"+
+                        "<div class='Settings_Path_Display_Block' data-settings-window style='display: none; opacity: 0'>"+
+                            "<div class='Settings_Path_Block'>"+
+                                "<h1>Изменение пароля</h1>"+
+                                "<div class='Horizontal_Stick_Window Settings_Stick'></div>"+
+                                "<input type='text' placeholder='*Пароль'>"+
+                                "<input type='text' placeholder='*Повторение пароля'>"+
+                                "<a class='Common_Button_Window'>Изменить</a>"+
+                            "</div>"+
+                        "</div>"+
+                        "<div class='Settings_Path_Display_Block' data-settings-window style='display: none; opacity: 0'>"+
+                            "<div class='Settings_Path_Block'>"+
+                                "<h1>Изменение почты</h1>"+
+                                "<div class='Horizontal_Stick_Window Settings_Stick'></div>"+
+                                "<input type='text' placeholder='*Почта'>"+
+                                "<input type='text' placeholder='*Повторение почты'>"+
+                                "<a class='Common_Button_Window'>Изменить</a>"+
+                            "</div>"+
+                        "</div>"+
+                        "<div class='Settings_Path_Display_Block' data-settings-window style='display: none; opacity: 0'>"+
+                            "<div class='Settings_Path_Block'>"+
+                                "<h1>Изменение номера телефона</h1>"+
+                                "<div class='Horizontal_Stick_Window Settings_Stick'></div>"+
+                                "<input type='text' placeholder='*Почта'>"+
+                                "<input type='text' placeholder='*Повторение почты'>"+
+                                "<a class='Common_Button_Window'>Изменить</a>"+
+                            "</div>"+
+                        "</div>"+
+                    "</div>"+
+                    "<div class='Stick_Window'></div>"+
+                "</div>",
+    "processingorders": "<div id='Processing' class='Base_Settings_Window Close_BG'>"+
+                            "<h1 class='Name_Window'>Оформление покупки</h1>"+
+                            "<div class='Stick_Window'></div>"+
+                            "<div class='Processing_Block Base_Settings_Inner_Window'>"+
+                                "<div class='Processing_Up_Block'>"+
+                                    "<div class='Processing_Left_Block'>"+
+                                    ""+
+                                        "<div class='Processing_Product_Display_Block'>"+
+                                            "<div class='Processing_Product_Block'>"+
+                                                "<img src='assets/img/TestProduct/id21.jpeg' alt='Товар'>"+
+                                                "<div class='Processing_Product_Path_Block'>"+
+                                                    "<h1>Соляная плитка</h1>"+
+                                                    "<div class='Processing_Product_Stick'></div>"+
+                                                    "<div class='Processing_Product_Inform'>"+
+                                                        "<h1>5 шт.</h1>"+
+                                                        "<h1>500 руб.</h1>"+
+                                                    "</div>"+
+                                                "</div>"+
+                                            "</div>"+
+                                        "</div>"+
+                                        ""+
+                                    "</div>"+
+                                    "<div class='Vertical_Stick_Processing'></div>"+
+                                    "<div class='Processing_Right_Block Scroll_Window'>"+
+                                        "<div class='Processing_Inner_Display_Block' data-processing-window='1' style='display: block; opacity: 1'>"+
+                                            "<div class='Processing_Inner_Path_Block'>"+
+                                                "<input type='text' placeholder='*Страна' data-value='country' data-date='0'>"+
+                                                "<input type='text' placeholder='*Область/Округ/Республика' data-value='obl' data-date='0'>"+
+                                                "<input type='text' placeholder='*Город' data-value='city' data-date='0'>"+
+                                                "<input type='text' placeholder='*Улица' data-value='street' data-date='0'>"+
+                                                "<input type='text' placeholder='*№ дома/строения' data-value='house' data-date='0'>"+
+                                                "<input type='text' placeholder='*Квартира' data-value='apartment'>"+
+                                                "<input type='text' placeholder='*Комментарий' data-value='comment'>"+
+                                            "</div>"+
+                                        "</div>"+
+                                        "<div class='Processing_Inner_Display_Block' data-processing-window='2' style='display: none; opacity: 0'>"+
+                                            "<div class='Processing_Inner_Path_Block Scroll_Window'>"+
+                                                "<div class='Processing_Inner_Row_Block'>"+
+                                                    "<input type='radio' name='delivery' data-radio='Екатеринбург' checked>"+
+                                                    "<img src='assets/img/icons/FirstVersionDelivery.svg' alt='Доставка'>"+
+                                                    "<div class='Processing_Inner_Column_Block'>"+
+                                                        "<h1>Доставка по Екатеринбургу и 30км. от Екатеринбурга</h1>"+
+                                                        "<div class='Processing_Inner_Stick'></div>"+
+                                                        "<p>Доставка совершается по Екатеринбургу и от Екатеринбурга на 30км ( Дальше 30 км. от Екатеринбурга мы не довозим ). Если вы живете дальше 30 км. от Екатеринбурга, то заказывайте доставку Транспортной компанией.</p>"+
+                                                    "</div>"+
+                                                "</div>"+
+                                                "<div class='Processing_Inner_Row_Block'>"+
+                                                    "<input type='radio' name='delivery' data-radio='Транспортная компания'>"+
+                                                    "<img src='assets/img/icons/SecondVersionDelivery.svg' alt='Доставка'>"+
+                                                    "<div class='Processing_Inner_Column_Block'>"+
+                                                        "<h1>Доставка Транспортной Компанией</h1>"+
+                                                        "<div class='Processing_Inner_Stick'></div>"+
+                                                        "<p>Доставка совершается Транспортной компанией. Цена меняется из-за размера, веса и дальности отправки груза. Если вы хотите заказать доставку Транспортной компанией, то после оформления заказа, вам придет на почту счект оплаты и с вами свяжется менеджер.</p>"+
+                                                    "</div>"+
+                                                "</div>"+
+                                                "<div class='Processing_Inner_Row_Block'>"+
+                                                    "<input type='radio' name='delivery' data-radio='Самовывоз'>"+
+                                                    "<img src='assets/img/icons/ThirdVersionDelivery.svg' alt='Доставка'>"+
+                                                    "<div class='Processing_Inner_Column_Block'>"+
+                                                        "<h1>Самовывоз</h1>"+
+                                                        "<div class='Processing_Inner_Stick'></div>"+
+                                                        "<p>С вами обговаривается время, когда Вы или транспортная компания с Вашей стороны, сможете приехать и забрать товар.</p>"+
+                                                    "</div>"+
+                                                "</div>"+
+                                            "</div>"+
+                                        "</div>"+
+                                        "<div class='Processing_Inner_Display_Block' data-processing-window='3' style='display: none; opacity: 0'>"+
+                                            "<div class='Processing_Inner_Path_Block Scroll_Window'>"+
+                                                "<div class='Processing_Inner_Row_Block'>"+
+                                                    "<input type='radio' name='payment' data-radio='Наличные' checked>"+
+                                                    "<img src='assets/img/icons/VersionPayCash.svg' alt='Оплата'>"+
+                                                    "<div class='Processing_Inner_Column_Block'>"+
+                                                        "<h1>Оплата наличными при получении</h1>"+
+                                                        "<div class='Processing_Inner_Stick'></div>"+
+                                                        "<p>Оплата происходит при получении товара.</p>"+
+                                                    "</div>"+
+                                                "</div>"+
+                                                "<div class='Processing_Inner_Row_Block'>"+
+                                                    "<input type='radio' name='payment' data-radio='Сбербанк'>"+
+                                                    "<img src='assets/img/icons/VersionPaySber.svg' alt='Оплата'>"+
+                                                    "<div class='Processing_Inner_Column_Block'>"+
+                                                        "<h1>Оплата по Сбербанку</h1>"+
+                                                        "<div class='Processing_Inner_Stick'></div>"+
+                                                        "<p>Оплата производиться через Сбербанк. Вы можете и внести предоплату, и оплатить товар при получении. Вам на почту будет отправлены реквизиты Сбербанка.</p>"+
+                                                    "</div>"+
+                                                "</div>"+
+                                                "<div class='Processing_Inner_Row_Block'>"+
+                                                    "<input type='radio' name='payment' data-radio='Реквизиты'>"+
+                                                    "<img src='assets/img/icons/VersionPayRequisites.svg' alt='Оплата'>"+
+                                                    "<div class='Processing_Inner_Column_Block'>"+
+                                                        "<h1>Оплата по реквизитам</h1>"+
+                                                        "<div class='Processing_Inner_Stick'></div>"+
+                                                        "<p>Оплата производится по реквизитам. Вы можете и внести предоплату, и оплатить товар при получении. Вам на почту будут отправлены реквизиты.</p>"+
+                                                    "</div>"+
+                                                "</div>"+
+                                            "</div>"+
+                                        "</div>"+
+                                        "<div class='Processing_Inner_Display_Block' data-processing-window='4' style='display: none; opacity: 0'>"+
+                                            "<div class='Processing_Inner_Path_Block Processing_Align'>"+
+                                                "<ul> <li data-check-country='Страна'>Страна: </li> </ul>"+
+                                                "<div class='Processing_Inner_Stick'></div>"+
+                                                "<ul> <li data-check-obl='Область/Округ/Регион'>Область/Округ/Регион: </li> </ul>"+
+                                                "<div class='Processing_Inner_Stick'></div>"+
+                                                "<ul> <li data-check-city='Город'>Город: </li> </ul>"+
+                                                "<div class='Processing_Inner_Stick'></div>"+
+                                                "<ul> <li data-check-street='Улица'>Улица: </li> </ul>"+
+                                                "<div class='Processing_Inner_Stick'></div>"+
+                                                "<ul> <li data-check-house='Дом'>Дом: </li> </ul>"+
+                                                "<div class='Processing_Inner_Stick'></div>"+
+                                                "<ul> <li data-check-apartment='Квартира'>Квартира: </li> </ul>"+
+                                                "<div class='Processing_Inner_Stick'></div>"+
+                                                "<ul> <li data-check-delivery='Тип доставки'>Тип доставки: Екатеринбург</li> </ul>"+
+                                                "<div class='Processing_Inner_Stick'></div>"+
+                                                "<ul> <li data-check-payment='Тип оплаты'>Тип оплаты: Наличные</li> </ul>"+
+                                                "<div class='Processing_Inner_Stick'></div>"+
+                                                "<ul> <li data-check-comment='Комментарий'>Комментарий: </li> </ul>"+
+                                                "<div class='Processing_Inner_Stick'></div>"+
+                                            "</div>"+
+                                        "</div>"+
+                                        ""+
+                                    "</div>"+
+                                "</div>"+
+                                "<div class='Processing_Down_Block'>"+
+                                    "<a class='Common_Button_Window' data-button-process='1' data-process-back='1' data-process-next='2' style='opacity: 0.5; pointer-events: none'>Далее</a>"+
+                                    "<a class='Common_Button_Window' data-button-process='2' data-process-back='2' data-process-next='1' style='display: none;'>Назад</a>"+
+                                    "<a class='Common_Button_Window' data-button-process='2' data-process-back='2' data-process-next='3' style='display: none;'>Далее</a>"+
+                                    "<a class='Common_Button_Window' data-button-process='3' data-process-back='3' data-process-next='2' style='display: none;'>Назад</a>"+
+                                    "<a class='Common_Button_Window' data-button-process='3' data-process-back='3' data-process-next='4' style='display: none;'>Далее</a>"+
+                                    "<a class='Common_Button_Window' data-button-process='4' data-process-back='4' data-process-next='3' style='display: none;'>Назад</a>"+
+                                    "<a class='Common_Button_Window' data-button-process='4' data-process-back='4' data-process-next='5' style='display: none;'>Оформить</a>"+
+                                "</div>"+
+                            "</div>"+
+                            "<div class='Stick_Window'></div>"+
+                        "</div>",
 }
+
 // =======================================================================
 
 // ============= [ Анимация появление элементов на экране ] ==============
@@ -256,8 +552,9 @@ $('body').on('click', 'a[data-id-button="Go_To_Register_Auth"]', () => {
 });
 // =======================================================================
 
+// ================= [ Левая стрелка для изображений ] ===================
 $('body').on('click', '.Left_Arrow', (e) => {
-    const attr = 'img[data-'+e.target.dataset.typeArrow+']';
+    const attr = '[data-'+e.target.dataset.typeArrow+']';
     const all_img = document.querySelectorAll(attr);
 
     for(let i = 0; i < all_img.length; i++) {
@@ -278,9 +575,11 @@ $('body').on('click', '.Left_Arrow', (e) => {
         }
     }
 });
+// =======================================================================
 
+// ================= [ Правая стрелка для изображений ] ==================
 $('body').on('click', '.Right_Arrow', (e) => {
-    const attr = 'img[data-'+e.target.dataset.typeArrow+']';
+    const attr = '[data-'+e.target.dataset.typeArrow+']';
     const all_img = document.querySelectorAll(attr);
 
     for(let i = 0; i < all_img.length; i++) {
@@ -300,3 +599,39 @@ $('body').on('click', '.Right_Arrow', (e) => {
         }
     }
 });
+// =======================================================================
+
+// =================== [ Кнопки в Оформлении заказа ] ====================
+$('body').on('click', 'a[data-button-process]', (e) => {
+    const GetNext = Number($(e.target).attr('data-process-next')); // 2
+    const GetBack = Number($(e.target).attr('data-process-back')); // 1
+
+    $('div[data-processing-window="'+(GetBack).toString()+'"]').animate({
+        opacity: 0
+    }, 500, () => {
+        const getAllNone = document.querySelectorAll('a[data-button-process="'+(GetBack).toString()+'"]');
+        for(let i = 0; i < getAllNone.length; i++) {
+            $(getAllNone[i]).css('display', 'none');
+        }
+        $('div[data-processing-window="'+(GetBack).toString()+'"]').css('display', 'none');
+        $('div[data-processing-window="'+(GetNext).toString()+'"]').css('display', 'block');
+        $('div[data-processing-window="'+(GetNext).toString()+'"]').animate({
+            opacity: 1
+        },500, () => {
+            const getAllBlock = document.querySelectorAll('a[data-button-process="'+(GetNext).toString()+'"]');
+            for(let i = 0; i < getAllBlock.length; i++) {
+                $(getAllBlock[i]).css('display', '');
+            }
+        });
+    });
+
+    if (GetNext == 4) {
+        ConvertInformation();
+    }
+    else if (GetNext == 5) {
+        NewOrder();
+    }
+});
+// =======================================================================
+
+// =================== [ Кнопки в Оформлении заказа ] ====================
